@@ -4,11 +4,11 @@ const ayarlar = require('./ayarlar.json');
 const fs = require('fs');
 
 client.on("ready", async () => {
-  client.user.setPresence({ activity: { name: "SUNUCU İSMİ ❤️ Defender" }, status: "idle" });  //// ❤️ Defender`ı Silmesseniz Sevinirim
+  client.user.setPresence({ activity: { name: "Heaven Roleplay ❤️ Heaven Development" }, status: "idle" });  //// 
   let botVoiceChannel = client.channels.cache.get(ayarlar.botVoiceChannelID);
   if (botVoiceChannel) botVoiceChannel.join().catch(err => console.error("Bot ses kanalına bağlanamadı!"));
 });
-// Defender tarafından kodlanmıştır.
+// 公Captain#7618 tarafından kodlanmıştır.
 
 client.on("message", async message => {
   if (message.author.bot || !message.guild || !message.content.toLowerCase().startsWith(ayarlar.botPrefix)) return;
@@ -230,4 +230,4 @@ client.on('guildUpdate', async (oldGuild, newGuild) => {
     });
 }); 
 
-client.login(ayarlar.botToken).then(c => console.log(`${client.user.tag} olarak giriş yapıldı / Defender#0001`)).catch(err => console.error("Bota giriş yapılırken başarısız olundu!"));
+client.login(ayarlar.botToken).then(c => console.log(`${client.user.tag} olarak giriş yapıldı / 公Captain#7618`)).catch(err => console.error("Bota giriş yapılırken başarısız olundu!"));
