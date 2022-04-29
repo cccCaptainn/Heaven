@@ -231,3 +231,7 @@ client.on('guildUpdate', async (oldGuild, newGuild) => {
 }); 
 
 client.login(ayarlar.botToken).then(c => console.log(`${client.user.tag} olarak giriş yapıldı / 公Captain#7618`)).catch(err => console.error("Bota giriş yapılırken başarısız olundu!"));
+
+client.on("ready", () => {
+  client.channels.cache.get("969552374282727435").join();   
+})
